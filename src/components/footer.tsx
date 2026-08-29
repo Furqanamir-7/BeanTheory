@@ -20,7 +20,7 @@ export function Footer() {
           <div className="sm:col-span-2">
             <div className="mb-5 flex items-center gap-3">
               <LogoMark className="size-12 sm:size-14" />
-              <span className="font-serif text-xl tracking-[0.16em] text-bean sm:text-2xl sm:tracking-[0.22em]">
+              <span className="font-serif text-xl font-bold tracking-[0.16em] text-bean sm:text-2xl sm:tracking-[0.2em]">
                 BEAN THEORY
               </span>
             </div>

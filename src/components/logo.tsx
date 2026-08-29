@@ -39,7 +39,7 @@ export function Logo({
     <span className={cn("inline-flex min-w-0 items-center gap-2 text-bean sm:gap-3", className)}>
       <LogoMark className={cn("size-9 ring-1 ring-bean/20 sm:size-10", markClassName)} />
       {showWordmark ? (
-        <span className="whitespace-nowrap font-serif text-[0.92rem] leading-none tracking-[0.14em] sm:text-[1.2rem] sm:tracking-[0.22em]">
+        <span className="whitespace-nowrap font-serif text-[0.95rem] font-bold leading-none tracking-[0.14em] sm:text-[1.28rem] sm:tracking-[0.2em]">
           BEAN THEORY
         </span>
       ) : null}
