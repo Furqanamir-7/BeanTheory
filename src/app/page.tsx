@@ -96,7 +96,7 @@ export default function Home() {
             Order from the site, book a ticket for what happens next, or just walk in.
           </p>
           <div className="mt-8 flex items-center gap-4">
-            <LogoMark className="size-12 text-gold" />
+            <LogoMark className="size-16" variant="light" />
             <p className="text-xs uppercase tracking-[0.28em] text-cream/45">
               Est. as a late-night coffee room
             </p>

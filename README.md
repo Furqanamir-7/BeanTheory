@@ -4,7 +4,8 @@ Prototype website for **BEAN THEORY**, a specialty cafe at 109, CCA 1, Sector C,
 
 Order from the menu, book event tickets, hold a table, and open the exact Google Maps pin. A logo loading screen plays on first load and on every page change.
 
-Live Instagram: [instagram.com/beantheorylhr](https://www.instagram.com/beantheorylhr/)  
+GitHub: [github.com/Furqanamir-7/BeanTheory](https://github.com/Furqanamir-7/BeanTheory.git)  
+Instagram: [instagram.com/beantheorylhr](https://www.instagram.com/beantheorylhr/)  
 Phone / WhatsApp: +92 323 4664878
 
 ## Run locally
@@ -37,8 +38,10 @@ The house menu in the site is a prototype list in PKR so the order flow is usabl
 
 ## Deploy on Vercel
 
+The production site is connected to the GitHub repo. Pushing `main` deploys automatically.
+
 ```bash
 npx vercel --prod
 ```
 
-Or import the GitHub repo in the Vercel dashboard and deploy. No environment variables are required.
+No environment variables are required.

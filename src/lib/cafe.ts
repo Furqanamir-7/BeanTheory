@@ -1,7 +1,7 @@
 export const cafe = {
   name: "BEAN THEORY",
   shortName: "Bean Theory",
-  tagline: "Every cup has a hypothesis.",
+  tagline: "Beyond Just Coffee!!",
   description:
     "Specialty coffee, late plates, and a room that stays open with the city. Bean Theory is a neighbourhood cafe in CCA 1, DHA Phase 6 — built for morning espresso, long conversations, and nights that refuse to end.",
   addressLine: "109, CCA 1, Sector C",

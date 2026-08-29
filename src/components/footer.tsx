@@ -18,7 +18,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="mb-5 flex items-center gap-3">
-            <LogoMark className="size-10 text-gold" />
+            <LogoMark className="size-14" variant="light" />
             <span className="font-serif text-2xl tracking-[0.22em]">BEAN THEORY</span>
           </div>
           <p className="max-w-sm text-sm leading-7 text-cream/60">{cafe.description}</p>

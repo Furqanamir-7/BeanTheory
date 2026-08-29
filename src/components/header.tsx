@@ -28,7 +28,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-40 border-b border-cream/10 bg-[#100c09]/80 backdrop-blur-xl">
       <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="shrink-0 text-cream" onClick={() => setOpen(false)}>
-          <Logo className="gap-2.5" markClassName="size-8" />
+          <Logo className="gap-2.5" markClassName="size-11" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

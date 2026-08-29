@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   },
   description: cafe.description,
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "BEAN THEORY, Lahore",
