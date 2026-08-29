@@ -25,36 +25,36 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-bean/72" />
-        <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-28 text-center sm:px-8">
-          <Reveal>
-            <div className="mb-8 w-[min(58vw,17.5rem)] rounded-full bg-tan p-2 shadow-[0_24px_60px_rgba(20,12,8,0.45)] ring-2 ring-tan sm:mb-10 sm:w-[19rem]">
-              <div className="relative aspect-square overflow-hidden rounded-full">
+        <div className="absolute inset-0 bg-bean/68" />
+        <div className="relative z-10 mx-auto flex w-full max-w-lg flex-col items-center px-5 pt-24 pb-12 text-center sm:max-w-xl sm:px-8">
+          <Reveal className="flex w-full flex-col items-center">
+            <div className="mb-5 w-28 overflow-hidden rounded-full shadow-[0_16px_40px_rgba(20,12,8,0.4)] ring-1 ring-tan/80 sm:mb-6 sm:w-36">
+              <div className="relative aspect-square">
                 <Image
                   src="/logo-framed.jpg"
                   alt="Bean Theory — Beyond Just Coffee"
                   fill
                   priority
-                  sizes="304px"
+                  sizes="144px"
                   className="object-cover"
                 />
               </div>
             </div>
-            <p className="mb-4 text-[0.72rem] uppercase tracking-[0.42em] text-tan">
+            <p className="text-[0.65rem] uppercase tracking-[0.38em] text-tan sm:text-[0.7rem]">
               DHA Phase 6 · Lahore
             </p>
-            <h1 className="font-serif text-5xl leading-[0.92] text-cream sm:text-7xl">
+            <h1 className="mt-2.5 font-serif text-4xl leading-[0.95] text-cream sm:text-6xl">
               Coffee, after dark.
             </h1>
-            <p className="mx-auto mt-6 max-w-md text-base leading-8 text-tan">
+            <p className="mt-3 max-w-sm text-sm leading-6 text-tan/90 sm:text-[0.95rem] sm:leading-7">
               {cafe.tagline} Specialty espresso, late plates, and a room that stays open until 3 AM.
             </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-6 flex w-full flex-col items-center justify-center gap-2.5 sm:w-auto sm:flex-row sm:gap-3">
               <Link
                 href="/order"
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "h-12 bg-tan px-6 text-bean hover:bg-tan/90"
+                  "h-11 w-full bg-tan px-5 text-bean hover:bg-tan/90 sm:w-auto"
                 )}
               >
                 Order from the bar
@@ -63,7 +63,7 @@ export default function Home() {
                 href="/events"
                 className={cn(
                   buttonVariants({ size: "lg", variant: "outline" }),
-                  "h-12 border-tan/40 px-6 text-cream hover:bg-tan/10"
+                  "h-11 w-full border-tan/40 px-5 text-cream hover:bg-tan/10 sm:w-auto"
                 )}
               >
                 Book an event ticket
