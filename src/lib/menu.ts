@@ -1,0 +1,477 @@
+export type MenuCategory =
+  | "espresso"
+  | "signatures"
+  | "cold"
+  | "not-coffee"
+  | "brunch"
+  | "plates"
+  | "sweets";
+
+export type MenuItem = {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: MenuCategory;
+  tags?: string[];
+  featured?: boolean;
+};
+
+export const categories: { id: MenuCategory; label: string; blurb: string }[] = [
+  { id: "espresso", label: "Espresso Bar", blurb: "Pulled tight. Served as it should be." },
+  { id: "signatures", label: "House Theories", blurb: "Drinks you will not find anywhere else in the CCA." },
+  { id: "cold", label: "Cold & Shaken", blurb: "For Lahore afternoons and 1 AM last rounds." },
+  { id: "not-coffee", label: "Matcha, Cacao & Coolers", blurb: "When the table is mixed." },
+  { id: "brunch", label: "Brunch", blurb: "Until 4 PM. Eggs, toast, something slow." },
+  { id: "plates", label: "All-Day Plates", blurb: "Proper food for a long sit." },
+  { id: "sweets", label: "Pastry & Sweets", blurb: "For the second coffee." },
+];
+
+export const menu: MenuItem[] = [
+  {
+    id: "espresso",
+    name: "Espresso",
+    description: "A short, syrupy shot. Ask for a double.",
+    price: 450,
+    category: "espresso",
+  },
+  {
+    id: "americano",
+    name: "Americano",
+    description: "Espresso lengthened with hot water.",
+    price: 550,
+    category: "espresso",
+  },
+  {
+    id: "macchiato",
+    name: "Macchiato",
+    description: "Espresso marked with a spoon of foam.",
+    price: 580,
+    category: "espresso",
+  },
+  {
+    id: "cortado",
+    name: "Cortado",
+    description: "Equal parts espresso and steamed milk.",
+    price: 620,
+    category: "espresso",
+  },
+  {
+    id: "flat-white",
+    name: "Flat White",
+    description: "Velvet microfoam, two shots, no theatre.",
+    price: 680,
+    category: "espresso",
+    featured: true,
+  },
+  {
+    id: "cappuccino",
+    name: "Cappuccino",
+    description: "Classic foam, cocoa dusted on request.",
+    price: 680,
+    category: "espresso",
+  },
+  {
+    id: "latte",
+    name: "Cafe Latte",
+    description: "The everyday. Oat, almond, or regular.",
+    price: 720,
+    category: "espresso",
+  },
+  {
+    id: "mocha",
+    name: "Mocha",
+    description: "Espresso folded through dark chocolate.",
+    price: 800,
+    category: "espresso",
+  },
+  {
+    id: "spanish-latte",
+    name: "Spanish Latte",
+    description: "Condensed milk, espresso, a little sea salt.",
+    price: 850,
+    category: "espresso",
+    tags: ["house favourite"],
+    featured: true,
+  },
+  {
+    id: "piccolo",
+    name: "Piccolo",
+    description: "A small, strong latte. Morning sharpness.",
+    price: 600,
+    category: "espresso",
+  },
+  {
+    id: "hypothesis",
+    name: "The Hypothesis",
+    description: "Brown-butter caramel, espresso, smoked salt foam.",
+    price: 890,
+    category: "signatures",
+    tags: ["signature"],
+    featured: true,
+  },
+  {
+    id: "night-theory",
+    name: "Night Theory",
+    description: "Dark mocha, crushed cardamom, a drop of orange blossom.",
+    price: 920,
+    category: "signatures",
+    tags: ["after dark"],
+    featured: true,
+  },
+  {
+    id: "pistachio-theory",
+    name: "Pistachio Theory",
+    description: "House pistachio cream, espresso, cold or hot.",
+    price: 950,
+    category: "signatures",
+    tags: ["signature"],
+    featured: true,
+  },
+  {
+    id: "saffron-cortado",
+    name: "Saffron Cortado",
+    description: "A few threads of saffron steeped into the milk.",
+    price: 880,
+    category: "signatures",
+  },
+  {
+    id: "rose-honey",
+    name: "Rose Honey Latte",
+    description: "Wild honey, damask rose, espresso.",
+    price: 860,
+    category: "signatures",
+  },
+  {
+    id: "dubai-mocha",
+    name: "Knafeh Mocha",
+    description: "Pistachio-knafeh chocolate, espresso, toasted kataifi.",
+    price: 980,
+    category: "signatures",
+    tags: ["limited"],
+  },
+  {
+    id: "kulfi-affogato",
+    name: "Kulfi Affogato",
+    description: "Pistachio kulfi drowned in a hot double shot.",
+    price: 950,
+    category: "signatures",
+    featured: true,
+  },
+  {
+    id: "iced-americano",
+    name: "Iced Americano",
+    description: "Long, cold, and clean.",
+    price: 620,
+    category: "cold",
+  },
+  {
+    id: "iced-latte",
+    name: "Iced Latte",
+    description: "Over ice. Extra shot if the day requires it.",
+    price: 760,
+    category: "cold",
+  },
+  {
+    id: "iced-spanish",
+    name: "Iced Spanish Latte",
+    description: "The house favourite, shaken cold.",
+    price: 890,
+    category: "cold",
+    featured: true,
+  },
+  {
+    id: "cold-brew",
+    name: "Cold Brew",
+    description: "Sixteen-hour steep. Low acid, high clarity.",
+    price: 720,
+    category: "cold",
+  },
+  {
+    id: "espresso-tonic",
+    name: "Espresso Tonic",
+    description: "Tonic, orange peel, a hot shot over the top.",
+    price: 820,
+    category: "cold",
+  },
+  {
+    id: "orange-espresso",
+    name: "Orange Espresso",
+    description: "Fresh kinnow, espresso, a little honey.",
+    price: 850,
+    category: "cold",
+  },
+  {
+    id: "shaken-espresso",
+    name: "Brown Sugar Shaken Espresso",
+    description: "Shaken hard with ice and brown sugar syrup.",
+    price: 800,
+    category: "cold",
+  },
+  {
+    id: "frappe",
+    name: "Coffee Frappe",
+    description: "Blended, not shy. Whipped cream on request.",
+    price: 880,
+    category: "cold",
+  },
+  {
+    id: "matcha-latte",
+    name: "Matcha Latte",
+    description: "Ceremonial grade, whisked to order.",
+    price: 850,
+    category: "not-coffee",
+    featured: true,
+  },
+  {
+    id: "strawberry-matcha",
+    name: "Strawberry Matcha",
+    description: "House strawberry puree under iced matcha.",
+    price: 920,
+    category: "not-coffee",
+  },
+  {
+    id: "hot-chocolate",
+    name: "Hot Chocolate",
+    description: "70% dark, steamed milk, a square of chocolate on the saucer.",
+    price: 720,
+    category: "not-coffee",
+  },
+  {
+    id: "saffron-cacao",
+    name: "Saffron Hot Chocolate",
+    description: "The winter drink, available all year because Lahore asked.",
+    price: 820,
+    category: "not-coffee",
+  },
+  {
+    id: "chai",
+    name: "Karachi Cutting Chai",
+    description: "Strong, sweet, in a glass. Two if you are staying.",
+    price: 480,
+    category: "not-coffee",
+  },
+  {
+    id: "dirty-chai",
+    name: "Dirty Chai",
+    description: "Masala chai with a shot of espresso.",
+    price: 720,
+    category: "not-coffee",
+  },
+  {
+    id: "mint-lime",
+    name: "Mint Lemonade",
+    description: "Fresh mint, lime, soda.",
+    price: 480,
+    category: "not-coffee",
+  },
+  {
+    id: "passionfruit",
+    name: "Passionfruit Cooler",
+    description: "Pulp, soda, a lot of ice.",
+    price: 620,
+    category: "not-coffee",
+  },
+  {
+    id: "peach-tea",
+    name: "Peach Iced Tea",
+    description: "House-brewed black tea, peach, lemon.",
+    price: 550,
+    category: "not-coffee",
+  },
+  {
+    id: "avocado-toast",
+    name: "Avocado Toast",
+    description: "Sourdough, chilli, lemon, soft egg if you want it.",
+    price: 1290,
+    category: "brunch",
+    featured: true,
+  },
+  {
+    id: "benedict",
+    name: "Eggs Benedict",
+    description: "English muffin, hollandaise, smoked chicken or spinach.",
+    price: 1490,
+    category: "brunch",
+  },
+  {
+    id: "shakshuka",
+    name: "Shakshuka",
+    description: "Pepper stew, two eggs, grilled bread.",
+    price: 1390,
+    category: "brunch",
+  },
+  {
+    id: "truffle-toast",
+    name: "Truffle Mushroom Toast",
+    description: "Creamed forest mushrooms, thyme, parmesan.",
+    price: 1450,
+    category: "brunch",
+  },
+  {
+    id: "french-toast",
+    name: "Brioche French Toast",
+    description: "Berry compote, mascarpone, maple.",
+    price: 1290,
+    category: "brunch",
+  },
+  {
+    id: "pancakes",
+    name: "Pancake Stack",
+    description: "Three, buttered, with honey or Nutella.",
+    price: 1190,
+    category: "brunch",
+  },
+  {
+    id: "waffles",
+    name: "Berry Waffle",
+    description: "Crisp waffle, cream, seasonal berries.",
+    price: 1290,
+    category: "brunch",
+  },
+  {
+    id: "granola",
+    name: "Granola Bowl",
+    description: "Yoghurt, house granola, fruit, honey.",
+    price: 990,
+    category: "brunch",
+  },
+  {
+    id: "omelette",
+    name: "Omelette Plate",
+    description: "Three eggs, cheese, toast, a side salad.",
+    price: 1090,
+    category: "brunch",
+  },
+  {
+    id: "club",
+    name: "Club Sandwich",
+    description: "Chicken, egg, bacon-style beef, fries.",
+    price: 1390,
+    category: "plates",
+  },
+  {
+    id: "pesto-panini",
+    name: "Chicken Pesto Panini",
+    description: "Pressed ciabatta, mozzarella, rocket.",
+    price: 1450,
+    category: "plates",
+  },
+  {
+    id: "smash-burger",
+    name: "Smash Burger",
+    description: "Double patty, American cheese, pickle, theory sauce.",
+    price: 1590,
+    category: "plates",
+    featured: true,
+  },
+  {
+    id: "crispy-chicken",
+    name: "Crispy Chicken Burger",
+    description: "Buttermilk fried, slaw, chilli honey.",
+    price: 1490,
+    category: "plates",
+  },
+  {
+    id: "truffle-fries",
+    name: "Truffle Fries",
+    description: "Parmesan, parsley, a lot of truffle oil.",
+    price: 790,
+    category: "plates",
+  },
+  {
+    id: "loaded-fries",
+    name: "Loaded Fries",
+    description: "Cheese sauce, jalapeño, pulled chicken.",
+    price: 890,
+    category: "plates",
+  },
+  {
+    id: "caesar",
+    name: "Caesar Salad",
+    description: "Add grilled chicken if you are making a meal of it.",
+    price: 1190,
+    category: "plates",
+  },
+  {
+    id: "alfredo",
+    name: "Fettuccine Alfredo",
+    description: "Cream, garlic, parmesan. Chicken optional.",
+    price: 1590,
+    category: "plates",
+  },
+  {
+    id: "arrabbiata",
+    name: "Penne Arrabbiata",
+    description: "Tomato, chilli, basil. Honest and hot.",
+    price: 1490,
+    category: "plates",
+  },
+  {
+    id: "basque",
+    name: "Basque Cheesecake",
+    description: "Burnt top, custard centre. The one people come back for.",
+    price: 790,
+    category: "sweets",
+    featured: true,
+  },
+  {
+    id: "tiramisu",
+    name: "Tiramisu",
+    description: "Built with our espresso. No shortcuts.",
+    price: 820,
+    category: "sweets",
+  },
+  {
+    id: "brownie",
+    name: "Warm Brownie",
+    description: "Served with vanilla ice cream.",
+    price: 650,
+    category: "sweets",
+  },
+  {
+    id: "date-cake",
+    name: "Sticky Date Cake",
+    description: "Toffee sauce, a pinch of sea salt.",
+    price: 690,
+    category: "sweets",
+  },
+  {
+    id: "pistachio-cake",
+    name: "Pistachio Slice",
+    description: "Olive oil cake, crushed pistachios, cream.",
+    price: 750,
+    category: "sweets",
+  },
+  {
+    id: "croissant",
+    name: "Butter Croissant",
+    description: "Baked through the day. Ask what just came out.",
+    price: 490,
+    category: "sweets",
+  },
+  {
+    id: "almond-croissant",
+    name: "Almond Croissant",
+    description: "Frangipane, toasted almonds, icing sugar.",
+    price: 590,
+    category: "sweets",
+  },
+  {
+    id: "cinnamon-roll",
+    name: "Cinnamon Roll",
+    description: "Cream cheese glaze. Best with a cortado.",
+    price: 620,
+    category: "sweets",
+  },
+];
+
+export const milkNote = "Oat, almond, or coconut milk + Rs 80. Extra shot + Rs 120.";
+
+export function getItem(id: string) {
+  return menu.find((item) => item.id === id);
+}
+
+export function featuredItems() {
+  return menu.filter((item) => item.featured);
+}

@@ -1,0 +1,109 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { categories, menu, milkNote, type MenuCategory } from "@/lib/menu";
+import { formatPkr } from "@/lib/format";
+import { AddButton } from "@/components/add-button";
+import { PageIntro } from "@/components/reveal";
+import { cn } from "@/lib/utils";
+
+export default function MenuPage() {
+  const [active, setActive] = useState<MenuCategory | "all">("all");
+
+  const items = useMemo(
+    () => (active === "all" ? menu : menu.filter((item) => item.category === active)),
+    [active]
+  );
+
+  return (
+    <div className="pb-24">
+      <PageIntro
+        kicker="The list"
+        title="Menu"
+        text="A working house menu for this prototype. Prices are in PKR, tax inclusive at the counter. Oat, almond, or coconut on any milk drink."
+      />
+
+      <div className="sticky top-[4.25rem] z-30 border-y border-cream/10 bg-[#100c09]/90 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-5 py-3 sm:px-8">
+          <FilterChip active={active === "all"} onClick={() => setActive("all")}>
+            All
+          </FilterChip>
+          {categories.map((category) => (
+            <FilterChip
+              key={category.id}
+              active={active === category.id}
+              onClick={() => setActive(category.id)}
+            >
+              {category.label}
+            </FilterChip>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-5 pt-12 sm:px-8">
+        <p className="mb-10 text-center text-xs tracking-wide text-cream/40">{milkNote}</p>
+        {(active === "all" ? categories : categories.filter((c) => c.id === active)).map((category) => {
+          const rows = items.filter((item) => item.category === category.id);
+          if (!rows.length) return null;
+          return (
+            <section key={category.id} className="mb-16">
+              <div className="mb-6 border-b border-cream/10 pb-4">
+                <h2 className="font-serif text-3xl">{category.label}</h2>
+                <p className="mt-2 text-sm text-cream/50">{category.blurb}</p>
+              </div>
+              <ul className="divide-y divide-cream/10">
+                {rows.map((item) => (
+                  <li key={item.id} className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="max-w-xl">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <h3 className="font-serif text-2xl">{item.name}</h3>
+                        {item.tags?.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[0.62rem] uppercase tracking-[0.22em] text-gold"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="mt-1 text-sm leading-6 text-cream/55">{item.description}</p>
+                    </div>
+                    <div className="flex items-center gap-4 sm:pl-6">
+                      <span className="text-sm text-gold">{formatPkr(item.price)}</span>
+                      <AddButton item={item} className="bg-gold text-[#1a120c] hover:bg-gold/90" />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function FilterChip({
+  active,
+  children,
+  onClick,
+}: {
+  active: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        "shrink-0 rounded-full border px-3 py-1.5 text-[0.68rem] uppercase tracking-[0.2em] transition-colors",
+        active
+          ? "border-gold bg-gold text-[#1a120c]"
+          : "border-cream/15 text-cream/70 hover:border-cream/40"
+      )}
+    >
+      {children}
+    </button>
+  );
+}
