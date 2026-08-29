@@ -17,57 +17,69 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative flex min-h-[100svh] items-center overflow-hidden">
-        <Image
-          src={gallery[0].src}
-          alt={gallery[0].alt}
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#100c09] via-[#100c09]/75 to-[#100c09]/40" />
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-5 pb-16 pt-28 text-center sm:px-8 sm:pb-24">
-          <Reveal>
-            <LogoMark
-              className="mb-8 size-40 drop-shadow-[0_24px_60px_rgba(0,0,0,0.7)] sm:mb-10 sm:size-56 md:size-72"
-              variant="light"
+      <section className="min-h-[100svh] pt-[4.25rem]">
+        <div className="grid min-h-[calc(100svh-4.25rem)] lg:grid-cols-2">
+          <div className="flex items-center justify-center bg-tan px-6 py-14 sm:px-12">
+            <Reveal>
+              <div className="relative mx-auto aspect-square w-[min(78vw,28rem)] overflow-hidden rounded-[1.75rem] shadow-[0_30px_70px_rgba(49,34,28,0.22)] ring-1 ring-bean/15">
+                <Image
+                  src="/logo-framed.jpg"
+                  alt="Bean Theory — Beyond Just Coffee"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 78vw, 448px"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+          <div className="relative flex min-h-[58vh] items-end overflow-hidden lg:min-h-full">
+            <Image
+              src={gallery[0].src}
+              alt={gallery[0].alt}
+              fill
               priority
-              sizes="(max-width: 640px) 160px, (max-width: 768px) 224px, 288px"
+              className="object-cover"
             />
-            <p className="mb-4 text-[0.72rem] uppercase tracking-[0.42em] text-gold">
-              DHA Phase 6 · Lahore
-            </p>
-            <h1 className="max-w-4xl font-serif text-5xl leading-[0.9] text-cream sm:text-7xl md:text-8xl">
-              Coffee, after dark.
-            </h1>
-            <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-cream/75">
-              {cafe.tagline} Specialty espresso, late plates, and a room that stays open until 3 AM.
-            </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                href="/order"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "h-12 px-6 bg-gold text-[#1a120c] hover:bg-gold/90"
-                )}
-              >
-                Order from the bar
-              </Link>
-              <Link
-                href="/events"
-                className={cn(
-                  buttonVariants({ size: "lg", variant: "outline" }),
-                  "h-12 border-cream/25 px-6 text-cream hover:bg-cream/10"
-                )}
-              >
-                Book an event ticket
-              </Link>
+            <div className="absolute inset-0 bg-gradient-to-t from-bean via-bean/75 to-bean/35" />
+            <div className="relative z-10 w-full px-6 pb-12 pt-24 sm:px-12 sm:pb-16">
+              <Reveal>
+                <p className="mb-4 text-[0.72rem] uppercase tracking-[0.42em] text-tan">
+                  DHA Phase 6 · Lahore
+                </p>
+                <h1 className="max-w-xl font-serif text-5xl leading-[0.92] text-cream sm:text-7xl">
+                  Coffee, after dark.
+                </h1>
+                <p className="mt-6 max-w-md text-base leading-8 text-tan">
+                  {cafe.tagline} Specialty espresso, late plates, and a room that stays open until 3 AM.
+                </p>
+                <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/order"
+                    className={cn(
+                      buttonVariants({ size: "lg" }),
+                      "h-12 bg-tan px-6 text-bean hover:bg-tan/90"
+                    )}
+                  >
+                    Order from the bar
+                  </Link>
+                  <Link
+                    href="/events"
+                    className={cn(
+                      buttonVariants({ size: "lg", variant: "outline" }),
+                      "h-12 border-tan/40 px-6 text-cream hover:bg-tan/10"
+                    )}
+                  >
+                    Book an event ticket
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-cream/10 bg-[#0c0907]">
+      <section className="border-y border-tan/15 bg-roast">
         <div className="mx-auto grid max-w-6xl gap-8 px-5 py-6 sm:grid-cols-3 sm:px-8">
           <div className="flex items-start gap-3 text-sm text-cream/70">
             <MapPin className="mt-0.5 size-4 text-gold" />
@@ -102,7 +114,7 @@ export default function Home() {
             Order from the site, book a ticket for what happens next, or just walk in.
           </p>
           <div className="mt-8 flex items-center gap-4">
-            <LogoMark className="size-16" variant="light" />
+            <LogoMark className="size-16" variant="framed" />
             <p className="text-xs uppercase tracking-[0.28em] text-cream/45">
               Est. as a late-night coffee room
             </p>
@@ -115,7 +127,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="bg-[#0c0907] py-24">
+      <section className="bg-roast py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
             <div className="mb-12 flex items-end justify-between gap-6">
@@ -131,7 +143,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {signatures.map((item, i) => (
               <Reveal key={item.id} delay={i * 0.06}>
-                <article className="flex h-full flex-col border border-cream/10 bg-[#14100c] p-6">
+                <article className="flex h-full flex-col border border-tan/15 bg-espresso p-6">
                   <p className="text-[0.65rem] uppercase tracking-[0.28em] text-gold/80">
                     {item.tags?.[0] ?? "featured"}
                   </p>
@@ -139,7 +151,7 @@ export default function Home() {
                   <p className="mt-3 flex-1 text-sm leading-6 text-cream/55">{item.description}</p>
                   <div className="mt-6 flex items-center justify-between">
                     <span className="text-sm text-gold">{formatPkr(item.price)}</span>
-                    <AddButton item={item} className="bg-gold text-[#1a120c] hover:bg-gold/90" />
+                    <AddButton item={item} className="bg-tan text-bean hover:bg-tan/90" />
                   </div>
                 </article>
               </Reveal>
@@ -165,7 +177,7 @@ export default function Home() {
                 <div className="relative aspect-[16/10]">
                   <Image src={event.image} alt={event.title} fill className="object-cover transition duration-700 group-hover:scale-105" />
                 </div>
-                <div className="bg-[#14100c] p-6">
+                <div className="bg-espresso p-6">
                   <p className="text-[0.65rem] uppercase tracking-[0.28em] text-gold">
                     {formatDate(event.date)}
                   </p>
@@ -188,7 +200,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col justify-center bg-[#0c0907] p-8 sm:p-12">
+          <div className="flex flex-col justify-center bg-espresso p-8 sm:p-12">
             <p className="mb-3 text-[0.7rem] uppercase tracking-[0.4em] text-gold">Find us</p>
             <h2 className="font-serif text-4xl">CCA 1, Phase 6.</h2>
             <p className="mt-5 text-sm leading-7 text-cream/60">
@@ -198,7 +210,7 @@ export default function Home() {
               href="/visit"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "mt-8 h-12 w-fit bg-gold px-6 text-[#1a120c] hover:bg-gold/90"
+                "mt-8 h-12 w-fit bg-tan px-6 text-bean hover:bg-tan/90"
               )}
             >
               Hours, map & tables

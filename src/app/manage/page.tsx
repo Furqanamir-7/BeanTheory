@@ -32,7 +32,7 @@ export default function ManagePage() {
   if (!unlocked) {
     return (
       <div className="flex min-h-[80svh] items-center justify-center px-5 pt-24">
-        <form onSubmit={onPin} className="w-full max-w-sm space-y-4 border border-cream/10 bg-[#14100c] p-8">
+        <form onSubmit={onPin} className="w-full max-w-sm space-y-4 border border-cream/10 bg-roast p-8">
           <p className="text-[0.7rem] uppercase tracking-[0.32em] text-gold">Floor</p>
           <h1 className="font-serif text-4xl">Management</h1>
           <p className="text-sm text-cream/55">
@@ -43,7 +43,7 @@ export default function ManagePage() {
             <Input id="pin" name="pin" type="password" className="h-10 border-cream/15 bg-transparent" />
           </div>
           {error ? <p className="text-sm text-red-400">{error}</p> : null}
-          <Button type="submit" className="h-11 w-full bg-gold text-[#1a120c] hover:bg-gold/90">
+          <Button type="submit" className="h-11 w-full bg-tan text-bean hover:bg-tan/90">
             Enter
           </Button>
         </form>
@@ -101,7 +101,7 @@ function Board({
   return (
     <section>
       <h2 className="mb-4 font-serif text-3xl">{title}</h2>
-      <div className="divide-y divide-cream/10 border border-cream/10 bg-[#14100c]">
+      <div className="divide-y divide-cream/10 border border-cream/10 bg-roast">
         {count > 0 ? children : <p className="p-6 text-sm text-cream/45">{empty}</p>}
       </div>
     </section>
@@ -210,7 +210,7 @@ function StatusButton({
       onClick={onClick}
       className={
         active
-          ? "rounded-full border border-gold bg-gold px-3 py-1 text-[0.65rem] uppercase tracking-[0.18em] text-[#1a120c]"
+          ? "rounded-full border border-tan bg-tan px-3 py-1 text-[0.65rem] uppercase tracking-[0.18em] text-bean"
           : "rounded-full border border-cream/20 px-3 py-1 text-[0.65rem] uppercase tracking-[0.18em] text-cream/70"
       }
     >

@@ -62,7 +62,7 @@ export function BookingForm({ event }: { event: CafeEvent }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="h-fit space-y-5 border border-cream/10 bg-[#14100c] p-6 sm:p-8">
+    <form onSubmit={onSubmit} className="h-fit space-y-5 border border-cream/10 bg-roast p-6 sm:p-8">
       <h2 className="font-serif text-3xl">Book a slot</h2>
       <p className="text-sm text-gold">{formatPkr(event.price)} per guest</p>
       <div>
@@ -115,7 +115,7 @@ export function BookingForm({ event }: { event: CafeEvent }) {
           className="min-h-20 border-cream/15 bg-transparent"
         />
       </div>
-      <Button type="submit" className="h-11 w-full bg-gold text-[#1a120c] hover:bg-gold/90">
+      <Button type="submit" className="h-11 w-full bg-tan text-bean hover:bg-tan/90">
         Request ticket
       </Button>
       <p className="text-xs leading-5 text-cream/40">

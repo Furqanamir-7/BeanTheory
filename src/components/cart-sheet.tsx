@@ -17,7 +17,7 @@ export function CartSheet() {
     <Sheet open={cartOpen} onOpenChange={setCartOpen}>
       <SheetContent
         side="right"
-        className="w-full border-cream/10 bg-[#14100c] text-cream sm:max-w-md"
+        className="w-full border-cream/10 bg-roast text-cream sm:max-w-md"
       >
         <SheetHeader className="border-b border-cream/10">
           <SheetTitle className="font-serif text-2xl tracking-wide text-cream">Your order</SheetTitle>
@@ -32,7 +32,7 @@ export function CartSheet() {
               <Link
                 href="/menu"
                 onClick={() => setCartOpen(false)}
-                className={cn(buttonVariants(), "bg-gold text-[#1a120c] hover:bg-gold/90")}
+                className={cn(buttonVariants(), "bg-tan text-bean hover:bg-tan/90")}
               >
                 Open the menu
               </Link>
@@ -72,7 +72,7 @@ export function CartSheet() {
                   onClick={() => setCartOpen(false)}
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "h-11 w-full bg-gold text-[#1a120c] hover:bg-gold/90"
+                    "h-11 w-full bg-tan text-bean hover:bg-tan/90"
                   )}
                 >
                   Checkout

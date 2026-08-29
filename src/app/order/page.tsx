@@ -62,7 +62,7 @@ export default function OrderPage() {
       />
 
       <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <section className="border border-cream/10 bg-[#14100c] p-6 sm:p-8">
+        <section className="border border-cream/10 bg-roast p-6 sm:p-8">
           <div className="mb-6 flex items-center justify-between">
             <h2 className="font-serif text-3xl">Bag</h2>
             <button
@@ -108,7 +108,7 @@ export default function OrderPage() {
           </div>
         </section>
 
-        <form onSubmit={onSubmit} className="space-y-5 border border-cream/10 bg-[#14100c] p-6 sm:p-8">
+        <form onSubmit={onSubmit} className="space-y-5 border border-cream/10 bg-roast p-6 sm:p-8">
           <h2 className="font-serif text-3xl">Details</h2>
           <Field label="Name" name="name" required placeholder="Your name" />
           <Field label="Phone" name="phone" required placeholder="03xx or +92" />
@@ -146,7 +146,7 @@ export default function OrderPage() {
           <Button
             type="submit"
             disabled={sending}
-            className="h-11 w-full bg-gold text-[#1a120c] hover:bg-gold/90"
+            className="h-11 w-full bg-tan text-bean hover:bg-tan/90"
           >
             Send order on WhatsApp
           </Button>

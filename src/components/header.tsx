@@ -25,9 +25,9 @@ export function Header() {
   const count = cartCount(cart);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-cream/10 bg-[#100c09]/80 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-tan/15 bg-bean/92 backdrop-blur-xl">
       <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="shrink-0 text-cream" onClick={() => setOpen(false)}>
+        <Link href="/" className="shrink-0 text-tan" onClick={() => setOpen(false)}>
           <Logo className="gap-2.5" markClassName="size-11" />
         </Link>
 
@@ -38,7 +38,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "text-[0.72rem] uppercase tracking-[0.28em] transition-colors",
-                pathname === link.href ? "text-gold" : "text-cream/65 hover:text-cream"
+                pathname === link.href ? "text-tan" : "text-cream/65 hover:text-cream"
               )}
             >
               {link.label}
@@ -50,13 +50,13 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="relative text-cream hover:bg-cream/10"
+            className="relative text-cream hover:bg-tan/10"
             onClick={() => setCartOpen(true)}
             aria-label="Open cart"
           >
             <ShoppingBag className="size-4" />
             {count > 0 ? (
-              <span className="absolute -top-0.5 -right-0.5 grid size-4 place-items-center rounded-full bg-gold text-[0.6rem] font-semibold text-[#1a120c]">
+              <span className="absolute -top-0.5 -right-0.5 grid size-4 place-items-center rounded-full bg-tan text-[0.6rem] font-semibold text-bean">
                 {count}
               </span>
             ) : null}
@@ -64,7 +64,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-cream hover:bg-cream/10 md:hidden"
+            className="text-cream hover:bg-tan/10 md:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
           >
@@ -74,7 +74,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-cream/10 bg-[#100c09] px-5 py-6 md:hidden">
+        <div className="border-t border-tan/15 bg-bean px-5 py-6 md:hidden">
           <nav className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
@@ -83,7 +83,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className={cn(
                   "text-sm uppercase tracking-[0.28em]",
-                  pathname === link.href ? "text-gold" : "text-cream/80"
+                  pathname === link.href ? "text-tan" : "text-cream/80"
                 )}
               >
                 {link.label}

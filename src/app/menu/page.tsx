@@ -23,7 +23,7 @@ export default function MenuPage() {
         text="A working house menu for this prototype. Prices are in PKR, tax inclusive at the counter. Oat, almond, or coconut on any milk drink."
       />
 
-      <div className="sticky top-[4.25rem] z-30 border-y border-cream/10 bg-[#100c09]/90 backdrop-blur-xl">
+      <div className="sticky top-[4.25rem] z-30 border-y border-cream/10 bg-espresso/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-5 py-3 sm:px-8">
           <FilterChip active={active === "all"} onClick={() => setActive("all")}>
             All
@@ -70,7 +70,7 @@ export default function MenuPage() {
                     </div>
                     <div className="flex items-center gap-4 sm:pl-6">
                       <span className="text-sm text-gold">{formatPkr(item.price)}</span>
-                      <AddButton item={item} className="bg-gold text-[#1a120c] hover:bg-gold/90" />
+                      <AddButton item={item} className="bg-tan text-bean hover:bg-tan/90" />
                     </div>
                   </li>
                 ))}
@@ -99,7 +99,7 @@ function FilterChip({
       className={cn(
         "shrink-0 rounded-full border px-3 py-1.5 text-[0.68rem] uppercase tracking-[0.2em] transition-colors",
         active
-          ? "border-gold bg-gold text-[#1a120c]"
+          ? "border-tan bg-tan text-bean"
           : "border-cream/15 text-cream/70 hover:border-cream/40"
       )}
     >

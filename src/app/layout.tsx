@@ -22,13 +22,27 @@ export const metadata: Metadata = {
   },
   description: cafe.description,
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "BEAN THEORY, Lahore",
     description: cafe.tagline,
     type: "website",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bean Theory — Beyond Just Coffee",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BEAN THEORY, Lahore",
+    description: cafe.tagline,
+    images: ["/og.jpg"],
   },
 };
 

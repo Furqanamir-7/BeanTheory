@@ -76,7 +76,7 @@ export default function VisitPage() {
             allowFullScreen
           />
         </div>
-        <div className="space-y-8 border border-cream/10 bg-[#14100c] p-6 sm:p-8">
+        <div className="space-y-8 border border-cream/10 bg-roast p-6 sm:p-8">
           <div className="flex gap-3">
             <MapPin className="size-4 text-gold" />
             <p className="text-sm leading-7 text-cream/75">
@@ -121,7 +121,7 @@ export default function VisitPage() {
 
       <form
         onSubmit={onSubmit}
-        className="mx-auto mt-12 grid max-w-6xl gap-6 border border-cream/10 bg-[#14100c] p-6 sm:p-8 lg:grid-cols-2"
+        className="mx-auto mt-12 grid max-w-6xl gap-6 border border-cream/10 bg-roast p-6 sm:p-8 lg:grid-cols-2"
       >
         <div>
           <h2 className="font-serif text-4xl">Hold a table</h2>
@@ -147,7 +147,7 @@ export default function VisitPage() {
                 Choose
               </option>
               {times.map((time) => (
-                <option key={time} value={time} className="bg-[#14100c]">
+                <option key={time} value={time} className="bg-roast">
                   {time}
                 </option>
               ))}
@@ -158,7 +158,7 @@ export default function VisitPage() {
             <Label htmlFor="notes">Notes</Label>
             <Textarea id="notes" name="notes" className="min-h-20 border-cream/15 bg-transparent" />
           </div>
-          <Button type="submit" className="h-11 bg-gold text-[#1a120c] hover:bg-gold/90 sm:col-span-2">
+          <Button type="submit" className="h-11 bg-tan text-bean hover:bg-tan/90 sm:col-span-2">
             Request a table
           </Button>
         </div>

@@ -11,9 +11,12 @@
   --font-serif: var(--font-cormorant);
   --font-heading: var(--font-cormorant);
   --font-mono: var(--font-geist-mono);
-  --color-cream: #f3ebdf;
-  --color-gold: #c9a56a;
-  --color-espresso: #100c09;
+  --color-cream: #f4e9d8;
+  --color-gold: #8f6b45;
+  --color-espresso: #1c140f;
+  --color-tan: #cbbda0;
+  --color-bean: #31221c;
+  --color-roast: #241910;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -54,38 +57,38 @@
 
 :root,
 .dark {
-  --background: #100c09;
-  --foreground: #f3ebdf;
-  --card: #1a140f;
-  --card-foreground: #f3ebdf;
-  --popover: #1a140f;
-  --popover-foreground: #f3ebdf;
-  --primary: #c9a56a;
-  --primary-foreground: #1a120c;
-  --secondary: #2a2118;
-  --secondary-foreground: #f3ebdf;
-  --muted: #2a2118;
-  --muted-foreground: #cbbba6;
-  --accent: #2f261c;
-  --accent-foreground: #f3ebdf;
+  --background: #1c140f;
+  --foreground: #f4e9d8;
+  --card: #241910;
+  --card-foreground: #f4e9d8;
+  --popover: #241910;
+  --popover-foreground: #f4e9d8;
+  --primary: #8f6b45;
+  --primary-foreground: #31221c;
+  --secondary: #3a2c22;
+  --secondary-foreground: #f4e9d8;
+  --muted: #3a2c22;
+  --muted-foreground: #cbbda0;
+  --accent: #3a2c22;
+  --accent-foreground: #f4e9d8;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: rgb(243 235 223 / 12%);
-  --input: rgb(243 235 223 / 16%);
-  --ring: #c9a56a;
-  --chart-1: #c9a56a;
-  --chart-2: #8b6a3e;
-  --chart-3: #f3ebdf;
+  --border: rgb(203 189 160 / 18%);
+  --input: rgb(203 189 160 / 22%);
+  --ring: #8f6b45;
+  --chart-1: #8f6b45;
+  --chart-2: #cbbda0;
+  --chart-3: #f4e9d8;
   --chart-4: #5c4630;
-  --chart-5: #2a2118;
+  --chart-5: #241910;
   --radius: 0.75rem;
-  --sidebar: #1a140f;
-  --sidebar-foreground: #f3ebdf;
-  --sidebar-primary: #c9a56a;
-  --sidebar-primary-foreground: #1a120c;
-  --sidebar-accent: #2a2118;
-  --sidebar-accent-foreground: #f3ebdf;
-  --sidebar-border: rgb(243 235 223 / 12%);
-  --sidebar-ring: #c9a56a;
+  --sidebar: #241910;
+  --sidebar-foreground: #f4e9d8;
+  --sidebar-primary: #8f6b45;
+  --sidebar-primary-foreground: #31221c;
+  --sidebar-accent: #3a2c22;
+  --sidebar-accent-foreground: #f4e9d8;
+  --sidebar-border: rgb(203 189 160 / 18%);
+  --sidebar-ring: #8f6b45;
 }
 
 @layer base {
@@ -118,7 +121,7 @@
 
 .gold-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #c9a56a, transparent);
+  background: linear-gradient(90deg, transparent, #8f6b45, transparent);
 }
 
 @keyframes steam {

@@ -17,7 +17,7 @@ export default function EventsPage() {
           <Link
             key={event.id}
             href={`/events/${event.id}`}
-            className="group overflow-hidden border border-cream/10 bg-[#14100c]"
+            className="group overflow-hidden border border-cream/10 bg-roast"
           >
             <div className="relative aspect-[16/9]">
               <Image
