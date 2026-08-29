@@ -17,22 +17,22 @@ export function CartSheet() {
     <Sheet open={cartOpen} onOpenChange={setCartOpen}>
       <SheetContent
         side="right"
-        className="w-full border-cream/10 bg-roast pb-[env(safe-area-inset-bottom)] text-cream sm:max-w-md"
+        className="w-full border-bean/12 bg-cream pb-[env(safe-area-inset-bottom)] text-bean sm:max-w-md"
       >
-        <SheetHeader className="border-b border-cream/10">
-          <SheetTitle className="font-serif text-2xl tracking-wide text-cream">Your order</SheetTitle>
+        <SheetHeader className="border-b border-bean/10">
+          <SheetTitle className="font-serif text-2xl tracking-wide text-bean">Your order</SheetTitle>
         </SheetHeader>
         <div className="flex flex-1 flex-col overflow-y-auto px-4 pb-6">
           {count === 0 ? (
             <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-              <ShoppingBag className="size-8 text-gold/70" />
-              <p className="max-w-[16rem] text-sm leading-6 text-cream/60">
+              <ShoppingBag className="size-8 text-bean/50" />
+              <p className="max-w-[16rem] text-sm leading-6 text-bean/60">
                 Nothing in the bag yet. The Spanish latte is a reliable first move.
               </p>
               <Link
                 href="/menu"
                 onClick={() => setCartOpen(false)}
-                className={cn(buttonVariants(), "bg-tan text-bean hover:bg-tan/90")}
+                className={cn(buttonVariants(), "bg-bean text-tan hover:bg-bean/90")}
               >
                 Open the menu
               </Link>
@@ -44,10 +44,10 @@ export function CartSheet() {
                   <li key={`${item.id}-${item.note ?? ""}`} className="flex items-start justify-between gap-3">
                     <div>
                       <p className="font-medium">{item.name}</p>
-                      {item.note ? <p className="text-xs text-cream/45">{item.note}</p> : null}
-                      <p className="mt-1 text-sm text-gold">{formatPkr(item.price * item.qty)}</p>
+                      {item.note ? <p className="text-xs text-bean/45">{item.note}</p> : null}
+                      <p className="mt-1 text-sm text-bean/80">{formatPkr(item.price * item.qty)}</p>
                     </div>
-                    <div className="flex items-center gap-2 rounded-full border border-cream/15 px-2 py-1">
+                    <div className="flex items-center gap-2 rounded-full border border-bean/15 px-2 py-1">
                       <button type="button" onClick={() => setQty(item.id, item.qty - 1)} aria-label="Decrease">
                         <Minus className="size-3.5" />
                       </button>
@@ -59,12 +59,12 @@ export function CartSheet() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto space-y-4 border-t border-cream/10 pt-4">
+              <div className="mt-auto space-y-4 border-t border-bean/10 pt-4">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-cream/60">Subtotal</span>
+                  <span className="text-bean/60">Subtotal</span>
                   <span className="font-medium">{formatPkr(total)}</span>
                 </div>
-                <p className="text-xs leading-5 text-cream/40">
+                <p className="text-xs leading-5 text-bean/45">
                   Pickup at the counter or dine in. Payment at the cafe. We will ping the kitchen on WhatsApp.
                 </p>
                 <Link
@@ -72,7 +72,7 @@ export function CartSheet() {
                   onClick={() => setCartOpen(false)}
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "h-11 w-full bg-tan text-bean hover:bg-tan/90"
+                    "h-11 w-full bg-bean text-tan hover:bg-bean/90"
                   )}
                 >
                   Checkout

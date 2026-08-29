@@ -33,23 +33,23 @@ export default async function EventDetailPage({
     <div className="pb-24 pt-24">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <Link href="/events" className="text-xs uppercase tracking-[0.28em] text-gold">
+          <Link href="/events" className="text-xs uppercase tracking-[0.28em] text-bean/70">
             All events
           </Link>
           <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl">
             <Image src={event.image} alt={event.title} fill className="object-cover" />
           </div>
-          <p className="mt-8 text-[0.7rem] uppercase tracking-[0.32em] text-gold">
+          <p className="mt-8 text-[0.7rem] uppercase tracking-[0.32em] text-bean/60">
             {formatDate(event.date)}
           </p>
           <h1 className="mt-3 font-serif text-5xl">{event.title}</h1>
-          <p className="mt-3 text-lg text-cream/70">{event.subtitle}</p>
-          <p className="mt-6 max-w-2xl text-sm leading-8 text-cream/65">{event.description}</p>
+          <p className="mt-3 text-lg text-bean/70">{event.subtitle}</p>
+          <p className="mt-6 max-w-2xl text-sm leading-8 text-bean/70">{event.description}</p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {event.perks.map((perk) => (
               <li
                 key={perk}
-                className="rounded-full border border-cream/15 px-3 py-1 text-xs text-cream/70"
+                className="rounded-full border border-bean/15 px-3 py-1 text-xs text-bean/70"
               >
                 {perk}
               </li>

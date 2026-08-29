@@ -10,14 +10,14 @@ import { Toaster } from "@/components/ui/sonner";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
+    <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
       <CafeProvider>
         <LoadingScreen />
         <Header />
         <CartSheet />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Toaster theme="dark" position="top-center" />
+        <Toaster theme="light" position="top-center" />
       </CafeProvider>
     </ThemeProvider>
   );

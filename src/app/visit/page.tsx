@@ -66,53 +66,53 @@ export default function VisitPage() {
       />
 
       <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-8 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="overflow-hidden rounded-2xl border border-cream/10">
+        <div className="overflow-hidden rounded-2xl border border-bean/12">
           <iframe
             title="Bean Theory on Google Maps"
             src={cafe.mapsEmbed}
-            className="h-[320px] w-full grayscale contrast-125 sm:h-[480px]"
+            className="h-[320px] w-full sm:h-[480px]"
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           />
         </div>
-        <div className="space-y-8 border border-cream/10 bg-roast p-6 sm:p-8">
+        <div className="space-y-8 border border-bean/12 bg-cream p-6 sm:p-8">
           <div className="flex gap-3">
-            <MapPin className="size-4 text-gold" />
-            <p className="text-sm leading-7 text-cream/75">
+            <MapPin className="size-4 text-bean" />
+            <p className="text-sm leading-7 text-bean/80">
               {cafe.addressLine}
               <br />
               {cafe.area}
               <br />
-              <a href={cafe.mapsUrl} className="text-gold" target="_blank" rel="noreferrer">
+              <a href={cafe.mapsUrl} className="text-bean underline-offset-4 hover:underline" target="_blank" rel="noreferrer">
                 Open in Google Maps
               </a>
             </p>
           </div>
           <div className="flex gap-3">
-            <Clock3 className="size-4 text-gold" />
-            <ul className="space-y-2 text-sm text-cream/75">
+            <Clock3 className="size-4 text-bean" />
+            <ul className="space-y-2 text-sm text-bean/80">
               {cafe.hours.map((row) => (
                 <li key={row.label}>
-                  <span className="text-cream/45">{row.label}: </span>
+                  <span className="text-bean/50">{row.label}: </span>
                   {row.value}
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex gap-3">
-            <Phone className="size-4 text-gold" />
-            <a href={`tel:${cafe.phoneTel}`} className="text-sm hover:text-gold">
+            <Phone className="size-4 text-bean" />
+            <a href={`tel:${cafe.phoneTel}`} className="text-sm hover:text-bean">
               {cafe.phoneDisplay}
             </a>
           </div>
           <div className="flex gap-3">
-            <svg viewBox="0 0 24 24" fill="none" className="size-4 text-gold" aria-hidden>
+            <svg viewBox="0 0 24 24" fill="none" className="size-4 text-bean" aria-hidden>
               <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.6" />
               <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
               <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
             </svg>
-            <a href={cafe.instagram} className="text-sm hover:text-gold" target="_blank" rel="noreferrer">
+            <a href={cafe.instagram} className="text-sm hover:text-bean" target="_blank" rel="noreferrer">
               {cafe.instagramHandle}
             </a>
           </div>
@@ -121,11 +121,11 @@ export default function VisitPage() {
 
       <form
         onSubmit={onSubmit}
-        className="mx-auto mt-12 grid max-w-6xl gap-6 border border-cream/10 bg-roast p-6 sm:p-8 lg:grid-cols-2"
+        className="mx-auto mt-12 grid max-w-6xl gap-6 border border-bean/12 bg-cream p-6 sm:p-8 lg:grid-cols-2"
       >
         <div>
           <h2 className="font-serif text-4xl">Hold a table</h2>
-          <p className="mt-4 max-w-md text-sm leading-7 text-cream/55">
+          <p className="mt-4 max-w-md text-sm leading-7 text-bean/60">
             Walk-ins are welcome. If you are coming as a group, send a request — the floor confirms
             on WhatsApp. This is a hold, not a lock, until they reply.
           </p>
@@ -140,14 +140,14 @@ export default function VisitPage() {
               id="time"
               name="time"
               required
-              className="h-10 w-full rounded-lg border border-cream/15 bg-transparent px-2.5 text-sm"
+              className="h-10 w-full rounded-lg border border-bean/15 bg-transparent px-2.5 text-sm"
               defaultValue=""
             >
               <option value="" disabled>
                 Choose
               </option>
               {times.map((time) => (
-                <option key={time} value={time} className="bg-roast">
+                <option key={time} value={time} className="bg-cream">
                   {time}
                 </option>
               ))}
@@ -156,9 +156,9 @@ export default function VisitPage() {
           <Field label="Guests" name="guests" type="number" />
           <div className="space-y-2 sm:col-span-2">
             <Label htmlFor="notes">Notes</Label>
-            <Textarea id="notes" name="notes" className="min-h-20 border-cream/15 bg-transparent" />
+            <Textarea id="notes" name="notes" className="min-h-20 border-bean/15 bg-transparent" />
           </div>
-          <Button type="submit" className="h-11 bg-tan text-bean hover:bg-tan/90 sm:col-span-2">
+          <Button type="submit" className="h-11 bg-bean text-tan hover:bg-bean/90 sm:col-span-2">
             Request a table
           </Button>
         </div>
@@ -188,7 +188,7 @@ function Field({
         required={required}
         min={type === "number" ? 1 : undefined}
         defaultValue={type === "number" ? 2 : undefined}
-        className="h-10 border-cream/15 bg-transparent"
+        className="h-10 border-bean/15 bg-transparent"
       />
     </div>
   );

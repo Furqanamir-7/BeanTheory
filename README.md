@@ -2,6 +2,8 @@
 
 Prototype website for **BEAN THEORY**, a specialty cafe at 109, CCA 1, Sector C, DHA Phase 6, Lahore.
 
+The site uses the official circular **BT** seal (header, footer, favicon, and social preview) and the logo’s light beige (`#D6C3AA`) as the page colour, with the dark brown from the mark for type and buttons.
+
 Order from the menu, book event tickets, hold a table, and open the exact Google Maps pin. A logo loading screen plays on first load and on every page change.
 
 GitHub: [github.com/Furqanamir-7/BeanTheory](https://github.com/Furqanamir-7/BeanTheory.git)  

@@ -37,9 +37,9 @@ export function PageIntro({
   return (
     <div className="mx-auto max-w-3xl px-5 pt-24 pb-10 text-center sm:px-8 sm:pt-32 sm:pb-12">
       <Reveal>
-        <p className="mb-4 text-[0.7rem] uppercase tracking-[0.42em] text-gold">{kicker}</p>
-        <h1 className="font-serif text-5xl leading-none text-cream sm:text-6xl">{title}</h1>
-        <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-cream/65 sm:text-base">{text}</p>
+        <p className="mb-4 text-[0.7rem] uppercase tracking-[0.42em] text-bean/60">{kicker}</p>
+        <h1 className="font-serif text-5xl leading-none text-bean sm:text-6xl">{title}</h1>
+        <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-bean/65 sm:text-base">{text}</p>
       </Reveal>
     </div>
   );

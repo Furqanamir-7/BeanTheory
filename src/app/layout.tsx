@@ -22,7 +22,10 @@ export const metadata: Metadata = {
   },
   description: cafe.description,
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
@@ -50,7 +53,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#31221c",
+  themeColor: "#d6c3aa",
 };
 
 export default function RootLayout({
@@ -61,10 +64,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${cormorant.variable} dark h-full antialiased`}
+      className={`${outfit.variable} ${cormorant.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col overflow-x-hidden bg-espresso text-cream">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-tan text-bean">
         <div className="grain" aria-hidden />
         <Providers>{children}</Providers>
       </body>

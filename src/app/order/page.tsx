@@ -62,32 +62,32 @@ export default function OrderPage() {
       />
 
       <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <section className="border border-cream/10 bg-roast p-6 sm:p-8">
+        <section className="border border-bean/12 bg-cream p-6 sm:p-8">
           <div className="mb-6 flex items-center justify-between">
             <h2 className="font-serif text-3xl">Bag</h2>
             <button
               type="button"
-              className="text-xs uppercase tracking-[0.22em] text-gold"
+              className="text-xs uppercase tracking-[0.22em] text-bean/70"
               onClick={() => setCartOpen(true)}
             >
               {cartCount(cart)} items
             </button>
           </div>
           {cart.length === 0 ? (
-            <p className="text-sm leading-7 text-cream/55">
+            <p className="text-sm leading-7 text-bean/60">
               Nothing here yet.{" "}
-              <Link href="/menu" className="text-gold underline-offset-4 hover:underline">
+              <Link href="/menu" className="text-bean underline-offset-4 hover:underline">
                 Open the menu
               </Link>{" "}
               and add a drink.
             </p>
           ) : (
-            <ul className="divide-y divide-cream/10">
+            <ul className="divide-y divide-bean/10">
               {cart.map((item) => (
                 <li key={`${item.id}-${item.note ?? ""}`} className="flex items-center justify-between gap-4 py-4">
                   <div>
                     <p className="font-medium">{item.name}</p>
-                    <p className="text-sm text-gold">{formatPkr(item.price)}</p>
+                    <p className="text-sm text-bean/75">{formatPkr(item.price)}</p>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <button type="button" onClick={() => setQty(item.id, item.qty - 1)}>
@@ -102,13 +102,13 @@ export default function OrderPage() {
               ))}
             </ul>
           )}
-          <div className="mt-6 flex items-center justify-between border-t border-cream/10 pt-4">
-            <span className="text-cream/60">Total</span>
-            <span className="font-serif text-2xl text-gold">{formatPkr(total)}</span>
+          <div className="mt-6 flex items-center justify-between border-t border-bean/10 pt-4">
+            <span className="text-bean/60">Total</span>
+            <span className="font-serif text-2xl text-bean">{formatPkr(total)}</span>
           </div>
         </section>
 
-        <form onSubmit={onSubmit} className="space-y-5 border border-cream/10 bg-roast p-6 sm:p-8">
+        <form onSubmit={onSubmit} className="space-y-5 border border-bean/12 bg-cream p-6 sm:p-8">
           <h2 className="font-serif text-3xl">Details</h2>
           <Field label="Name" name="name" required placeholder="Your name" />
           <Field label="Phone" name="phone" required placeholder="03xx or +92" />
@@ -122,8 +122,8 @@ export default function OrderPage() {
                   onClick={() => setFulfillment(option)}
                   className={
                     fulfillment === option
-                      ? "rounded-lg border border-gold bg-gold/15 px-3 py-2 text-sm"
-                      : "rounded-lg border border-cream/15 px-3 py-2 text-sm text-cream/70"
+                      ? "rounded-lg border border-bean bg-bean/10 px-3 py-2 text-sm"
+                      : "rounded-lg border border-bean/15 px-3 py-2 text-sm text-bean/70"
                   }
                 >
                   {option === "pickup" ? "Pickup" : "Dine in"}
@@ -140,17 +140,17 @@ export default function OrderPage() {
               id="notes"
               name="notes"
               placeholder="Oat milk, extra shot, no sugar…"
-              className="min-h-24 border-cream/15 bg-transparent"
+              className="min-h-24 border-bean/15 bg-transparent"
             />
           </div>
           <Button
             type="submit"
             disabled={sending}
-            className="h-11 w-full bg-tan text-bean hover:bg-tan/90"
+            className="h-11 w-full bg-bean text-tan hover:bg-bean/90"
           >
             Send order on WhatsApp
           </Button>
-          <p className="text-xs leading-5 text-cream/40">
+          <p className="text-xs leading-5 text-bean/45">
             This prototype opens WhatsApp to {cafe.phoneDisplay}. The kitchen confirms from there.
           </p>
         </form>
@@ -178,7 +178,7 @@ function Field({
         name={name}
         required={required}
         placeholder={placeholder}
-        className="h-10 border-cream/15 bg-transparent"
+        className="h-10 border-bean/15 bg-transparent"
       />
     </div>
   );

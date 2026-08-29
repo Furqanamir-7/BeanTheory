@@ -35,7 +35,7 @@ function BrandLoader() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
             >
-              <LogoMark className="size-40 ring-1 ring-bean/10 sm:size-48" variant="framed" priority sizes="192px" />
+              <LogoMark className="size-40 ring-1 ring-bean/15 sm:size-48" priority sizes="192px" />
             </motion.div>
             <motion.p
               className="font-serif text-3xl tracking-[0.38em] text-bean sm:text-4xl"

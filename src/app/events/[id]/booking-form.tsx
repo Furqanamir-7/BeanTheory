@@ -62,9 +62,9 @@ export function BookingForm({ event }: { event: CafeEvent }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="h-fit space-y-5 border border-cream/10 bg-roast p-6 sm:p-8">
+    <form onSubmit={onSubmit} className="h-fit space-y-5 border border-bean/12 bg-cream p-6 sm:p-8">
       <h2 className="font-serif text-3xl">Book a slot</h2>
-      <p className="text-sm text-gold">{formatPkr(event.price)} per guest</p>
+      <p className="text-sm text-bean/80">{formatPkr(event.price)} per guest</p>
       <div>
         <Label className="mb-2">Time</Label>
         <div className="grid gap-2">
@@ -75,23 +75,23 @@ export function BookingForm({ event }: { event: CafeEvent }) {
               onClick={() => setSlotId(row.id)}
               className={
                 slotId === row.id
-                  ? "flex items-center justify-between rounded-lg border border-gold bg-gold/15 px-3 py-2 text-sm"
-                  : "flex items-center justify-between rounded-lg border border-cream/15 px-3 py-2 text-sm text-cream/70"
+                  ? "flex items-center justify-between rounded-lg border border-bean bg-bean/10 px-3 py-2 text-sm"
+                  : "flex items-center justify-between rounded-lg border border-bean/15 px-3 py-2 text-sm text-bean/70"
               }
             >
               <span>{row.time}</span>
-              <span className="text-xs text-cream/40">{row.capacity} seats</span>
+              <span className="text-xs text-bean/45">{row.capacity} seats</span>
             </button>
           ))}
         </div>
       </div>
       <div className="space-y-2">
         <Label htmlFor="name">Name</Label>
-        <Input id="name" name="name" required className="h-10 border-cream/15 bg-transparent" />
+        <Input id="name" name="name" required className="h-10 border-bean/15 bg-transparent" />
       </div>
       <div className="space-y-2">
         <Label htmlFor="phone">Phone</Label>
-        <Input id="phone" name="phone" required className="h-10 border-cream/15 bg-transparent" />
+        <Input id="phone" name="phone" required className="h-10 border-bean/15 bg-transparent" />
       </div>
       <div className="space-y-2">
         <Label>Guests</Label>
@@ -103,7 +103,7 @@ export function BookingForm({ event }: { event: CafeEvent }) {
           <button type="button" onClick={() => setGuests((n) => Math.min(8, n + 1))}>
             +
           </button>
-          <span className="text-sm text-cream/45">{formatPkr(event.price * guests)} total</span>
+          <span className="text-sm text-bean/50">{formatPkr(event.price * guests)} total</span>
         </div>
       </div>
       <div className="space-y-2">
@@ -112,13 +112,13 @@ export function BookingForm({ event }: { event: CafeEvent }) {
           id="notes"
           name="notes"
           placeholder="Allergies, performer name, celebration…"
-          className="min-h-20 border-cream/15 bg-transparent"
+          className="min-h-20 border-bean/15 bg-transparent"
         />
       </div>
-      <Button type="submit" className="h-11 w-full bg-tan text-bean hover:bg-tan/90">
+      <Button type="submit" className="h-11 w-full bg-bean text-tan hover:bg-bean/90">
         Request ticket
       </Button>
-      <p className="text-xs leading-5 text-cream/40">
+      <p className="text-xs leading-5 text-bean/45">
         Status stays pending until the floor confirms. A WhatsApp message goes to {cafe.phoneDisplay}.
       </p>
     </form>

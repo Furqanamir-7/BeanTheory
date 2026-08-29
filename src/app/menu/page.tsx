@@ -23,7 +23,7 @@ export default function MenuPage() {
         text="A working house menu for this prototype. Prices are in PKR, tax inclusive at the counter. Oat, almond, or coconut on any milk drink."
       />
 
-      <div className="sticky top-16 z-30 border-y border-tan/15 bg-espresso/90 backdrop-blur-xl sm:top-[4.25rem]">
+      <div className="sticky top-16 z-30 border-y border-bean/12 bg-tan/90 backdrop-blur-xl sm:top-[4.25rem]">
         <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 [-ms-overflow-style:none] [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
           <FilterChip active={active === "all"} onClick={() => setActive("all")}>
             All
@@ -41,17 +41,17 @@ export default function MenuPage() {
       </div>
 
       <div className="mx-auto max-w-6xl px-5 pt-12 sm:px-8">
-        <p className="mb-10 text-center text-xs tracking-wide text-cream/40">{milkNote}</p>
+        <p className="mb-10 text-center text-xs tracking-wide text-bean/45">{milkNote}</p>
         {(active === "all" ? categories : categories.filter((c) => c.id === active)).map((category) => {
           const rows = items.filter((item) => item.category === category.id);
           if (!rows.length) return null;
           return (
             <section key={category.id} className="mb-16">
-              <div className="mb-6 border-b border-cream/10 pb-4">
+              <div className="mb-6 border-b border-bean/12 pb-4">
                 <h2 className="font-serif text-3xl">{category.label}</h2>
-                <p className="mt-2 text-sm text-cream/50">{category.blurb}</p>
+                <p className="mt-2 text-sm text-bean/55">{category.blurb}</p>
               </div>
-              <ul className="divide-y divide-cream/10">
+              <ul className="divide-y divide-bean/10">
                 {rows.map((item) => (
                   <li key={item.id} className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
                     <div className="max-w-xl">
@@ -60,17 +60,17 @@ export default function MenuPage() {
                         {item.tags?.map((tag) => (
                           <span
                             key={tag}
-                            className="text-[0.62rem] uppercase tracking-[0.22em] text-gold"
+                            className="text-[0.62rem] uppercase tracking-[0.22em] text-bean/55"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
-                      <p className="mt-1 text-sm leading-6 text-cream/55">{item.description}</p>
+                      <p className="mt-1 text-sm leading-6 text-bean/60">{item.description}</p>
                     </div>
                     <div className="flex items-center gap-4 sm:pl-6">
-                      <span className="text-sm text-gold">{formatPkr(item.price)}</span>
-                      <AddButton item={item} className="bg-tan text-bean hover:bg-tan/90" />
+                      <span className="text-sm text-bean">{formatPkr(item.price)}</span>
+                      <AddButton item={item} className="bg-bean text-tan hover:bg-bean/90" />
                     </div>
                   </li>
                 ))}
@@ -99,8 +99,8 @@ function FilterChip({
       className={cn(
         "shrink-0 rounded-full border px-3 py-1.5 text-[0.68rem] uppercase tracking-[0.2em] transition-colors",
         active
-          ? "border-tan bg-tan text-bean"
-          : "border-cream/15 text-cream/70 hover:border-cream/40"
+          ? "border-bean bg-bean text-tan"
+          : "border-bean/20 text-bean/70 hover:border-bean/40"
       )}
     >
       {children}

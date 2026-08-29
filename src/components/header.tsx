@@ -25,9 +25,9 @@ export function Header() {
   const count = cartCount(cart);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-tan/15 bg-bean/92 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-bean/12 bg-tan/92 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-3 sm:h-[4.25rem] sm:px-8">
-        <Link href="/" className="min-w-0 shrink text-tan" onClick={() => setOpen(false)}>
+        <Link href="/" className="min-w-0 shrink text-bean" onClick={() => setOpen(false)}>
           <Logo className="gap-2" markClassName="size-9 sm:size-11" />
         </Link>
 
@@ -38,7 +38,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "text-[0.72rem] uppercase tracking-[0.28em] transition-colors",
-                pathname === link.href ? "text-tan" : "text-cream/65 hover:text-cream"
+                pathname === link.href ? "text-bean" : "text-bean/55 hover:text-bean"
               )}
             >
               {link.label}
@@ -50,13 +50,13 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="relative text-cream hover:bg-tan/10"
+            className="relative text-bean hover:bg-bean/8"
             onClick={() => setCartOpen(true)}
             aria-label="Open cart"
           >
             <ShoppingBag className="size-4" />
             {count > 0 ? (
-              <span className="absolute -top-0.5 -right-0.5 grid size-4 place-items-center rounded-full bg-tan text-[0.6rem] font-semibold text-bean">
+              <span className="absolute -top-0.5 -right-0.5 grid size-4 place-items-center rounded-full bg-bean text-[0.6rem] font-semibold text-tan">
                 {count}
               </span>
             ) : null}
@@ -64,7 +64,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-cream hover:bg-tan/10 md:hidden"
+            className="text-bean hover:bg-bean/8 md:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
           >
@@ -74,7 +74,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-tan/15 bg-bean px-5 py-6 md:hidden">
+        <div className="border-t border-bean/12 bg-tan px-5 py-6 md:hidden">
           <nav className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
@@ -83,7 +83,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className={cn(
                   "text-sm uppercase tracking-[0.28em]",
-                  pathname === link.href ? "text-tan" : "text-cream/80"
+                  pathname === link.href ? "text-bean" : "text-bean/70"
                 )}
               >
                 {link.label}
@@ -91,7 +91,7 @@ export function Header() {
             ))}
             <a
               href={cafe.instagram}
-              className="text-sm uppercase tracking-[0.28em] text-cream/50"
+              className="text-sm uppercase tracking-[0.28em] text-bean/45"
               target="_blank"
               rel="noreferrer"
             >

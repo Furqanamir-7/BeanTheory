@@ -17,7 +17,7 @@ export default function EventsPage() {
           <Link
             key={event.id}
             href={`/events/${event.id}`}
-            className="group overflow-hidden border border-cream/10 bg-roast"
+            className="group overflow-hidden border border-bean/12 bg-cream"
           >
             <div className="relative aspect-[16/9]">
               <Image
@@ -28,14 +28,14 @@ export default function EventsPage() {
               />
             </div>
             <div className="p-6 sm:p-8">
-              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bean/60">
                 {formatDate(event.date)} · {event.slots.length} slot{event.slots.length > 1 ? "s" : ""}
               </p>
               <h2 className="mt-3 font-serif text-3xl">{event.title}</h2>
-              <p className="mt-2 text-sm text-cream/60">{event.subtitle}</p>
+              <p className="mt-2 text-sm text-bean/60">{event.subtitle}</p>
               <div className="mt-6 flex items-center justify-between text-sm">
-                <span className="text-gold">{formatPkr(event.price)} / guest</span>
-                <span className="uppercase tracking-[0.2em] text-cream/40">Book slot</span>
+                <span className="text-bean">{formatPkr(event.price)} / guest</span>
+                <span className="uppercase tracking-[0.2em] text-bean/40">Book slot</span>
               </div>
             </div>
           </Link>
