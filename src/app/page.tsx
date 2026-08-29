@@ -17,65 +17,59 @@ export default function Home() {
 
   return (
     <div>
-      <section className="min-h-[100svh] pt-[4.25rem]">
-        <div className="grid min-h-[calc(100svh-4.25rem)] lg:grid-cols-2">
-          <div className="flex items-center justify-center bg-tan px-6 py-14 sm:px-12">
-            <Reveal>
-              <div className="relative mx-auto aspect-square w-[min(78vw,28rem)] overflow-hidden rounded-[1.75rem] shadow-[0_30px_70px_rgba(49,34,28,0.22)] ring-1 ring-bean/15">
+      <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
+        <Image
+          src={gallery[0].src}
+          alt={gallery[0].alt}
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-bean/72" />
+        <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-28 text-center sm:px-8">
+          <Reveal>
+            <div className="mb-8 w-[min(58vw,17.5rem)] rounded-full bg-tan p-2 shadow-[0_24px_60px_rgba(20,12,8,0.45)] ring-2 ring-tan sm:mb-10 sm:w-[19rem]">
+              <div className="relative aspect-square overflow-hidden rounded-full">
                 <Image
                   src="/logo-framed.jpg"
                   alt="Bean Theory — Beyond Just Coffee"
                   fill
                   priority
-                  sizes="(max-width: 1024px) 78vw, 448px"
+                  sizes="304px"
                   className="object-cover"
                 />
               </div>
-            </Reveal>
-          </div>
-          <div className="relative flex min-h-[58vh] items-end overflow-hidden lg:min-h-full">
-            <Image
-              src={gallery[0].src}
-              alt={gallery[0].alt}
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-bean via-bean/75 to-bean/35" />
-            <div className="relative z-10 w-full px-6 pb-12 pt-24 sm:px-12 sm:pb-16">
-              <Reveal>
-                <p className="mb-4 text-[0.72rem] uppercase tracking-[0.42em] text-tan">
-                  DHA Phase 6 · Lahore
-                </p>
-                <h1 className="max-w-xl font-serif text-5xl leading-[0.92] text-cream sm:text-7xl">
-                  Coffee, after dark.
-                </h1>
-                <p className="mt-6 max-w-md text-base leading-8 text-tan">
-                  {cafe.tagline} Specialty espresso, late plates, and a room that stays open until 3 AM.
-                </p>
-                <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href="/order"
-                    className={cn(
-                      buttonVariants({ size: "lg" }),
-                      "h-12 bg-tan px-6 text-bean hover:bg-tan/90"
-                    )}
-                  >
-                    Order from the bar
-                  </Link>
-                  <Link
-                    href="/events"
-                    className={cn(
-                      buttonVariants({ size: "lg", variant: "outline" }),
-                      "h-12 border-tan/40 px-6 text-cream hover:bg-tan/10"
-                    )}
-                  >
-                    Book an event ticket
-                  </Link>
-                </div>
-              </Reveal>
             </div>
-          </div>
+            <p className="mb-4 text-[0.72rem] uppercase tracking-[0.42em] text-tan">
+              DHA Phase 6 · Lahore
+            </p>
+            <h1 className="font-serif text-5xl leading-[0.92] text-cream sm:text-7xl">
+              Coffee, after dark.
+            </h1>
+            <p className="mx-auto mt-6 max-w-md text-base leading-8 text-tan">
+              {cafe.tagline} Specialty espresso, late plates, and a room that stays open until 3 AM.
+            </p>
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/order"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "h-12 bg-tan px-6 text-bean hover:bg-tan/90"
+                )}
+              >
+                Order from the bar
+              </Link>
+              <Link
+                href="/events"
+                className={cn(
+                  buttonVariants({ size: "lg", variant: "outline" }),
+                  "h-12 border-tan/40 px-6 text-cream hover:bg-tan/10"
+                )}
+              >
+                Book an event ticket
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
