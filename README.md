@@ -36,12 +36,8 @@ Orders, tickets, and table holds are stored in the browser for the prototype. Ma
 
 The house menu in the site is a prototype list in PKR so the order flow is usable. Swap it for the official `BT Menu.pdf` items and prices when you have the file in the repo.
 
-## Deploy on Vercel
+## Production
 
-The production site is connected to the GitHub repo. Pushing `main` deploys automatically.
+Live site: [temporary-instant-sable-epln4jy.vercel.app](https://temporary-instant-sable-epln4jy.vercel.app/)
 
-```bash
-npx vercel --prod
-```
-
-No environment variables are required.
+That Vercel project is the only production URL. Push `main` to [github.com/Furqanamir-7/BeanTheory](https://github.com/Furqanamir-7/BeanTheory.git) to update it. Do not create a new Vercel project.

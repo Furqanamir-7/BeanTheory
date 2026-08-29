@@ -13,9 +13,15 @@ type LogoMarkProps = {
   className?: string;
   variant?: Variant;
   priority?: boolean;
+  sizes?: string;
 };
 
-export function LogoMark({ className, variant = "light", priority = false }: LogoMarkProps) {
+export function LogoMark({
+  className,
+  variant = "light",
+  priority = false,
+  sizes = "160px",
+}: LogoMarkProps) {
   return (
     <span className={cn("relative inline-block size-9 shrink-0", className)}>
       <Image
@@ -23,7 +29,7 @@ export function LogoMark({ className, variant = "light", priority = false }: Log
         alt="Bean Theory"
         fill
         priority={priority}
-        sizes="160px"
+        sizes={sizes}
         className="object-contain"
       />
     </span>

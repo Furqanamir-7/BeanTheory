@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden">
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         <Image
           src={gallery[0].src}
           alt={gallery[0].alt}
@@ -25,19 +25,25 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#100c09] via-[#100c09]/70 to-[#100c09]/25" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 pt-32 sm:px-8 sm:pb-24">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#100c09] via-[#100c09]/75 to-[#100c09]/40" />
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-5 pb-16 pt-28 text-center sm:px-8 sm:pb-24">
           <Reveal>
-            <p className="mb-5 text-[0.72rem] uppercase tracking-[0.42em] text-gold">
+            <LogoMark
+              className="mb-8 size-40 drop-shadow-[0_24px_60px_rgba(0,0,0,0.7)] sm:mb-10 sm:size-56 md:size-72"
+              variant="light"
+              priority
+              sizes="(max-width: 640px) 160px, (max-width: 768px) 224px, 288px"
+            />
+            <p className="mb-4 text-[0.72rem] uppercase tracking-[0.42em] text-gold">
               DHA Phase 6 · Lahore
             </p>
-            <h1 className="max-w-3xl font-serif text-6xl leading-[0.9] text-cream sm:text-8xl">
+            <h1 className="max-w-4xl font-serif text-5xl leading-[0.9] text-cream sm:text-7xl md:text-8xl">
               Coffee, after dark.
             </h1>
-            <p className="mt-7 max-w-lg text-base leading-8 text-cream/75">
+            <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-cream/75">
               {cafe.tagline} Specialty espresso, late plates, and a room that stays open until 3 AM.
             </p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 href="/order"
                 className={cn(
