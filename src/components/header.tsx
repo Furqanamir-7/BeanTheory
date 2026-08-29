@@ -25,10 +25,10 @@ export function Header() {
   const count = cartCount(cart);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-tan/15 bg-bean/92 backdrop-blur-xl">
-      <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="shrink-0 text-tan" onClick={() => setOpen(false)}>
-          <Logo className="gap-2.5" markClassName="size-11" />
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-tan/15 bg-bean/92 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-3 sm:h-[4.25rem] sm:px-8">
+        <Link href="/" className="min-w-0 shrink text-tan" onClick={() => setOpen(false)}>
+          <Logo className="gap-2" markClassName="size-9 sm:size-11" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -46,7 +46,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           <Button
             variant="ghost"
             size="icon"

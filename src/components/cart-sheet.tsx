@@ -17,7 +17,7 @@ export function CartSheet() {
     <Sheet open={cartOpen} onOpenChange={setCartOpen}>
       <SheetContent
         side="right"
-        className="w-full border-cream/10 bg-roast text-cream sm:max-w-md"
+        className="w-full border-cream/10 bg-roast pb-[env(safe-area-inset-bottom)] text-cream sm:max-w-md"
       >
         <SheetHeader className="border-b border-cream/10">
           <SheetTitle className="font-serif text-2xl tracking-wide text-cream">Your order</SheetTitle>

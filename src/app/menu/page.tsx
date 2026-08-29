@@ -23,8 +23,8 @@ export default function MenuPage() {
         text="A working house menu for this prototype. Prices are in PKR, tax inclusive at the counter. Oat, almond, or coconut on any milk drink."
       />
 
-      <div className="sticky top-[4.25rem] z-30 border-y border-cream/10 bg-espresso/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-5 py-3 sm:px-8">
+      <div className="sticky top-16 z-30 border-y border-tan/15 bg-espresso/90 backdrop-blur-xl sm:top-[4.25rem]">
+        <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 [-ms-overflow-style:none] [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
           <FilterChip active={active === "all"} onClick={() => setActive("all")}>
             All
           </FilterChip>

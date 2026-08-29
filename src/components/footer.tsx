@@ -14,43 +14,57 @@ function InstagramIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-tan/15 bg-bean text-cream">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="mb-5 flex items-center gap-3">
-            <LogoMark className="size-14" variant="framed" />
-            <span className="font-serif text-2xl tracking-[0.22em] text-tan">BEAN THEORY</span>
+    <footer className="border-t border-tan/15 bg-bean pb-[env(safe-area-inset-bottom)] text-cream">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-2">
+        <div className="grid gap-10 sm:grid-cols-2">
+          <div className="sm:col-span-2">
+            <div className="mb-5 flex items-center gap-3">
+              <LogoMark className="size-12 sm:size-14" variant="framed" />
+              <span className="font-serif text-xl tracking-[0.16em] text-tan sm:text-2xl sm:tracking-[0.22em]">
+                BEAN THEORY
+              </span>
+            </div>
+            <p className="max-w-sm text-sm leading-7 text-cream/60">{cafe.description}</p>
           </div>
-          <p className="max-w-sm text-sm leading-7 text-cream/60">{cafe.description}</p>
+          <div>
+            <p className="mb-4 text-[0.68rem] uppercase tracking-[0.3em] text-tan">Visit</p>
+            <p className="text-sm leading-7 text-cream/70">
+              {cafe.addressLine}
+              <br />
+              {cafe.area}
+              <br />
+              {cafe.hoursShort}
+            </p>
+          </div>
+          <div>
+            <p className="mb-4 text-[0.68rem] uppercase tracking-[0.3em] text-tan">Talk to us</p>
+            <p className="text-sm leading-7 text-cream/70">
+              <a className="hover:text-tan" href={`tel:${cafe.phoneTel}`}>
+                {cafe.phoneDisplay}
+              </a>
+              <br />
+              <a className="inline-flex items-center gap-2 hover:text-tan" href={cafe.instagram} target="_blank" rel="noreferrer">
+                <InstagramIcon className="size-3.5" />
+                {cafe.instagramHandle}
+              </a>
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="mb-4 text-[0.68rem] uppercase tracking-[0.3em] text-tan">Visit</p>
-          <p className="text-sm leading-7 text-cream/70">
-            {cafe.addressLine}
-            <br />
-            {cafe.area}
-            <br />
-            {cafe.hoursShort}
-          </p>
-        </div>
-        <div>
-          <p className="mb-4 text-[0.68rem] uppercase tracking-[0.3em] text-tan">Talk to us</p>
-          <p className="text-sm leading-7 text-cream/70">
-            <a className="hover:text-tan" href={`tel:${cafe.phoneTel}`}>
-              {cafe.phoneDisplay}
-            </a>
-            <br />
-            <a className="inline-flex items-center gap-2 hover:text-tan" href={cafe.instagram} target="_blank" rel="noreferrer">
-              <InstagramIcon className="size-3.5" />
-              {cafe.instagramHandle}
-            </a>
-          </p>
+        <div className="overflow-hidden rounded-xl ring-1 ring-tan/20">
+          <iframe
+            title="Bean Theory on Google Maps"
+            src={cafe.mapsEmbed}
+            className="h-56 w-full grayscale contrast-125 sm:h-72 lg:h-full lg:min-h-[20rem]"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </div>
       <div className="border-t border-tan/15 px-5 py-6 text-center text-[0.7rem] uppercase tracking-[0.22em] text-cream/40 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 sm:flex-row">
           <span>© {new Date().getFullYear()} Bean Theory, Lahore</span>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             <Link href="/manage" className="hover:text-cream/70">
               Management
             </Link>
@@ -60,6 +74,9 @@ export function Footer() {
             <Link href="/events" className="hover:text-cream/70">
               Tickets
             </Link>
+            <a href={cafe.mapsUrl} className="hover:text-cream/70" target="_blank" rel="noreferrer">
+              Maps
+            </a>
           </div>
         </div>
       </div>

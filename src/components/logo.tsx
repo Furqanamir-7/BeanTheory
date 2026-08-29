@@ -50,10 +50,10 @@ export function Logo({
   variant?: Variant;
 }) {
   return (
-    <span className={cn("inline-flex items-center gap-3 text-tan", className)}>
-      <LogoMark className={cn("size-10 ring-1 ring-tan/30", markClassName)} variant={variant} />
+    <span className={cn("inline-flex min-w-0 items-center gap-2 text-tan sm:gap-3", className)}>
+      <LogoMark className={cn("size-9 ring-1 ring-tan/30 sm:size-10", markClassName)} variant={variant} />
       {showWordmark ? (
-        <span className="hidden font-serif text-[1.2rem] leading-none tracking-[0.22em] sm:inline">
+        <span className="whitespace-nowrap font-serif text-[0.92rem] leading-none tracking-[0.14em] sm:text-[1.2rem] sm:tracking-[0.22em]">
           BEAN THEORY
         </span>
       ) : null}

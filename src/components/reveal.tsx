@@ -35,7 +35,7 @@ export function PageIntro({
   text: string;
 }) {
   return (
-    <div className="mx-auto max-w-3xl px-5 pt-28 pb-12 text-center sm:px-8 sm:pt-32">
+    <div className="mx-auto max-w-3xl px-5 pt-24 pb-10 text-center sm:px-8 sm:pt-32 sm:pb-12">
       <Reveal>
         <p className="mb-4 text-[0.7rem] uppercase tracking-[0.42em] text-gold">{kicker}</p>
         <h1 className="font-serif text-5xl leading-none text-cream sm:text-6xl">{title}</h1>

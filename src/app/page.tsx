@@ -26,7 +26,7 @@ export default function Home() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-bean/68" />
-        <div className="relative z-10 mx-auto flex w-full max-w-lg flex-col items-center px-5 pt-24 pb-12 text-center sm:max-w-xl sm:px-8">
+        <div className="relative z-10 mx-auto flex w-full max-w-lg flex-col items-center px-4 pt-24 pb-10 text-center sm:max-w-xl sm:px-8 sm:pb-12">
           <Reveal className="flex w-full flex-col items-center">
             <div className="mb-5 w-28 overflow-hidden rounded-full shadow-[0_16px_40px_rgba(20,12,8,0.4)] ring-1 ring-tan/80 sm:mb-6 sm:w-36">
               <div className="relative aspect-square">

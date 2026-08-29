@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
@@ -46,6 +46,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#31221c",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -57,7 +64,7 @@ export default function RootLayout({
       className={`${outfit.variable} ${cormorant.variable} dark h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col bg-espresso text-cream">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-espresso text-cream">
         <div className="grain" aria-hidden />
         <Providers>{children}</Providers>
       </body>
